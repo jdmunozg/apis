@@ -1,0 +1,10 @@
+{
+    "producto":[
+        {
+        "codigo": "1233",
+        "nombrePro": "Bareto",
+        "precio" : 2000
+        }
+    ],
+    "codigo":477
+}
