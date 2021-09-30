@@ -1,6 +1,13 @@
 from flask import Flask, request, jsonify
 import random
 
+app = Flask(__name__)
+customer = []
+bodega = []
+buy = {}
+contCompra = 0
+total = 0
+
 def generarCodigo():
     return random.randint(1,5000)
 
@@ -26,12 +33,7 @@ def retornoDatos(codigo):
         cont+=1
     return datos
 
-app = Flask(__name__)
-customer = []
-bodega = []
-buy = {}
-contCompra = 0
-total = 0
+
 
 @app.route("/clients/api", methods=["POST"])
 def cliente():
