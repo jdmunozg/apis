@@ -81,13 +81,13 @@ def productos():
 def compra():
     global buy
     respuesta = {}
-    buycod = request.args.get("buycod")
+    buycod = int(request.args.get("buycod"))
     if (buycod in buy):
             respuesta = {"Info": f"Compra con el cod {buycod} "+
                                         f"{buy[buycod][0]} Total: ${buy[buycod][1]}  "
                                         + f"Client: {buy[buycod][2]}"}
     else:
-        respuesta = {"Res": f"Compra {buycod} no hay, joda"}
+        respuesta = {"Res": f"Compra {buycod} no hay, no joda"}
     return jsonify(respuesta)
 
 if __name__ == "__main__":
