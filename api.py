@@ -81,7 +81,7 @@ def productos():
 def compra():
     global buy
     respuesta = {}
-    buycod = request.args.get("buycod")
+    buycod = int(request.args.get("buycod"))
     if (buycod in buy):
             respuesta = {"Info": f"Compra con el cod {buycod} "+
                                         f"{buy[buycod][0]} Total: ${buy[buycod][1]}  "
